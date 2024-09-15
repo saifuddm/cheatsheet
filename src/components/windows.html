@@ -1,0 +1,23 @@
+<div class="w-fit space-y-2">
+  <div
+    onclick="clickHandler('fn + t')"
+    class="rounded border-gray-500 px-2 py-1 hover:cursor-pointer hover:border-b-2 hover:border-r-2"
+  >
+    <code class="rounded bg-gray-800 px-2 py-1 text-yellow-400">fn + t</code>
+    <p>Pin Tab (Always on Top)</p>
+  </div>
+  <div
+    onclick="clickHandler('fn + c')"
+    class="rounded border-gray-500 px-2 py-1 hover:cursor-pointer hover:border-b-2 hover:border-r-2"
+  >
+    <code class="rounded bg-gray-800 px-2 py-1 text-yellow-400">fn + c</code>
+    <p>Color Picker</p>
+  </div>
+</div>
+
+<script>
+  console.log('Hello Windows');
+  function clickHandler(value) {
+    console.log(`Want to trigger ${value}`);
+  }
+</script>

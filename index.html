@@ -3,19 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <title>Cheatsheet</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./src/scripts/tailwindcss.js"></script>
+    <script src="./src/scripts/htmx.min.js"></script>
   </head>
-  <body class="bg-gray-900 text-gray-200 p-5">
+  <body class="bg-gray-900 p-5 text-gray-200">
     <h1 class="text-3xl font-bold text-gray-100">Cheatsheet</h1>
     <p class="text-gray-400">
       App containing various shortcuts and other useful information for various
       tools.
     </p>
-    <div class="mt-5"></div>
+    <div class="my-5"></div>
     <button
-      class="bg-blue-500 hover:bg-blue-600 text-white font-bold px-4 py-2 rounded"
+      hx-get="./src/components/design.html"
+      class="rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-600"
+      hx-target="#content"
     >
-      Desing Sheet
+      Design Sheet
     </button>
+    <button
+      hx-get="./src/components/windows.html"
+      class="rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-600"
+      hx-target="#content"
+    >
+      Windows Shortcuts
+    </button>
+
+    <div class="my-5 w-full rounded border-t-2 border-dashed py-1"></div>
+
+    <div id="content"></div>
   </body>
 </html>
